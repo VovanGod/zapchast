@@ -1,0 +1,326 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+
+    padding: 18px 130px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        column-gap: 26px;
+        user-select: none;
+
+        .title {
+            color: rgba(13, 162, 231, 1);
+            font-family: var(--montserrat);
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+
+        .subtitle {
+            color: rgba(107, 114, 128, 1);
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 8px;
+            line-height: 20px;
+        }
+    }
+
+    &-info {
+        text-align: left;
+    }
+
+    &__contacts {
+        display: flex;
+        column-gap: 16px;
+
+        .contact {
+            width: 200px;
+            height: 44px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 16px;
+            border-radius: 6px;
+
+            color: rgba(255, 255, 255, 1);
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+
+            img {
+                margin-top: 2px;
+                transition: transform 0.3s ease;
+            }
+
+            &:nth-child(1) {
+                background: rgba(37, 211, 102, 1);
+
+                &:hover {
+                    background: rgba(29, 185, 90, 1);
+                    transform: translateY(-2px);
+                }
+            }
+
+            &:nth-child(2) {
+                background: rgba(0, 136, 204, 1);
+
+                &:hover {
+                    background: rgba(0, 119, 179, 1);
+                    transform: translateY(-2px);
+                }
+
+                img {
+                    margin-top: 4px;
+                }
+            }
+
+            &:nth-child(3) {
+                background: rgba(238, 83, 83, 1);
+
+                &:hover {
+                    background: rgba(220, 70, 70, 1);
+                    transform: translateY(-2px);
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/* Адаптив для планшетов (1024px - 769px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 18px 60px;
+
+        &__contacts {
+            .contact {
+                width: 180px;
+                height: 42px;
+                font-size: 13px;
+            }
+        }
+
+        &__logo {
+            .title {
+                font-size: 26px;
+                line-height: 32px;
+            }
+            
+            .subtitle {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких планшетов (768px - 601px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 30px;
+
+        &__logo {
+            column-gap: 20px;
+            
+            .title {
+                font-size: 22px;
+                line-height: 28px;
+            }
+            
+            .subtitle {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 160px;
+                height: 40px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Адаптив для мобильных (600px - 426px) */
+@media (max-width: 600px) {
+    .header {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        &__logo {
+            column-gap: 15px;
+            
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .title {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            
+            .subtitle {
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+
+        &__contacts {
+            width: 100%;
+            justify-content: center;
+            
+            .contact {
+                width: 140px;
+                height: 38px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких мобильных (425px и меньше) */
+@media (max-width: 425px) {
+    .header {
+        padding: 10px 15px;
+
+        &__logo {
+            .title {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            
+            .subtitle {
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 120px;
+                height: 36px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+/* Адаптив для очень маленьких экранов (320px) */
+@media (max-width: 320px) {
+    .header {
+        padding: 8px 10px;
+
+        &__logo {
+            .title {
+                font-size: 14px;
+            }
+            
+            .subtitle {
+                font-size: 9px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 110px;
+                height: 34px;
+                font-size: 9px;
+            }
+        }
+    }
+}
+
+/* Landscape режим для мобильных устройств */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .header {
+        padding: 12px 40px;
+        
+        &__logo {
+            .title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            
+            .subtitle {
+                font-size: 11px;
+                line-height: 14px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 150px;
+                height: 38px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 10px 25px;
+        
+        &__logo {
+            .title {
+                font-size: 18px;
+            }
+            
+            .subtitle {
+                font-size: 10px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 140px;
+                height: 36px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+    .header {
+        padding: 8px 15px;
+        
+        &__logo {
+            .title {
+                font-size: 16px;
+            }
+            
+            .subtitle {
+                font-size: 9px;
+            }
+        }
+
+        &__contacts {
+            .contact {
+                width: 130px;
+                height: 34px;
+                font-size: 9px;
+            }
+        }
+    }
+}

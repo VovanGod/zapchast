@@ -1,0 +1,338 @@
+.addresses {
+    background: rgba(255, 255, 255, 1);
+    padding: 50px 0 65px 0;
+    position: relative;
+    text-align: center;
+
+    h2 {
+        color: rgba(58, 63, 75, 1);
+        font-family: "Montserrat", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    &-wrapper {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        li {
+            width: 420px;
+            height: 180px;
+            border: 1px solid rgba(13, 162, 231, 0.2);
+            border-radius: 8px;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 1);
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active,
+            &.visited {
+                border-color: rgba(238, 83, 83, 1);
+                transform: translateY(-2px);
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                padding: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-decoration: none;
+            }
+
+            h4 {
+                color: rgba(58, 63, 75, 1);
+                font-family: "Montserrat", sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            p {
+                color: rgba(107, 114, 128, 1);
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+                column-gap: 4px;
+                color: rgba(13, 162, 231, 1);
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+
+                img {
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &:hover .link,
+            &:active .link,
+            &.visited .link {
+                color: rgba(238, 83, 83, 1);
+            }
+
+            /* Стиль для посещенной ссылки */
+            a:visited + .link,
+            &.visited .link {
+                color: rgba(238, 83, 83, 1);
+            }
+        }
+    }
+}
+
+/* Адаптив для планшетов (1024px - 769px) */
+@media (max-width: 1024px) {
+    .addresses {
+        padding: 45px 0 60px 0;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        &-wrapper {
+            margin-top: 35px;
+        }
+
+        ul {
+            gap: 20px;
+
+            li {
+                width: 380px;
+                height: 170px;
+
+                a {
+                    padding: 22px;
+                }
+
+                h4 {
+                    font-size: 17px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких планшетов (768px - 601px) */
+@media (max-width: 768px) {
+    .addresses {
+        padding: 40px 0 50px 0;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        &-wrapper {
+            margin-top: 30px;
+        }
+
+        ul {
+            gap: 16px;
+
+            li {
+                width: 320px;
+                height: 160px;
+
+                a {
+                    padding: 20px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+
+                .link {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для мобильных (600px - 426px) */
+@media (max-width: 600px) {
+    .addresses {
+        padding: 35px 0 40px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        &-wrapper {
+            margin-top: 25px;
+        }
+
+        ul {
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                width: 100%;
+                max-width: 400px;
+                height: 150px;
+
+                a {
+                    padding: 18px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+
+                .link {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких мобильных (425px и меньше) */
+@media (max-width: 425px) {
+    .addresses {
+        padding: 30px 0 35px 0;
+
+        h2 {
+            font-size: 22px;
+        }
+
+        &-wrapper {
+            margin-top: 20px;
+        }
+
+        ul {
+            gap: 12px;
+
+            li {
+                height: 140px;
+
+                a {
+                    padding: 15px;
+                }
+
+                h4 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .link {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для очень маленьких экранов (320px) */
+@media (max-width: 320px) {
+    .addresses {
+        padding: 25px 0 30px 0;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        &-wrapper {
+            margin-top: 18px;
+        }
+
+        ul {
+            gap: 10px;
+
+            li {
+                height: 130px;
+
+                a {
+                    padding: 12px;
+                }
+
+                h4 {
+                    font-size: 14px;
+                }
+
+                p {
+                    font-size: 11px;
+                }
+
+                .link {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape режим для мобильных устройств */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .addresses {
+        padding: 30px 0 40px 0;
+
+        ul {
+            li {
+                height: 150px;
+                
+                a {
+                    padding: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .addresses {
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            li {
+                width: calc(50% - 12px);
+                height: 140px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+    .addresses {
+        padding: 25px 0 30px 0;
+
+        ul {
+            li {
+                width: calc(50% - 10px);
+                height: 130px;
+                
+                a {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

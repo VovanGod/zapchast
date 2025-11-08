@@ -1,0 +1,296 @@
+.cars {
+    padding: 50px 0 65px 0;
+    position: relative;
+    text-align: center;
+    background: rgba(229, 231, 235, 0.3);
+
+    h2 {
+        color: rgba(58, 63, 75, 1);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: rgba(107, 114, 128, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        width: 690px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 17px;
+    }
+
+    &-wrapper {
+        width: 100%;
+    }
+
+    ul {
+        margin-top: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        li {
+            width: 310px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+            justify-content: flex-start;
+            padding-left: 20px;
+            padding-right: 15px;
+            border: 1px solid rgba(226, 232, 240, 1);
+            border-radius: 8px;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 1);
+
+            p {
+                color: rgba(58, 63, 75, 1);
+                font-size: 16px;
+                font-weight: 400;
+                text-align: left;
+            }
+        }
+    }
+}
+
+/* Адаптив для планшетов (1024px - 769px) */
+@media (max-width: 1024px) {
+    .cars {
+        padding: 45px 0 60px 0;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        h3 {
+            width: 600px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        ul {
+            margin-top: 40px;
+            gap: 12px;
+
+            li {
+                width: 280px;
+                height: 55px;
+                padding-left: 18px;
+
+                p {
+                    font-size: 15px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких планшетов (768px - 601px) */
+@media (max-width: 768px) {
+    .cars {
+        padding: 40px 0 50px 0;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            width: 90%;
+            max-width: 500px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 15px;
+        }
+
+        ul {
+            margin-top: 35px;
+            gap: 10px;
+
+            li {
+                width: 240px;
+                height: 50px;
+                padding-left: 15px;
+                column-gap: 10px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для мобильных (600px - 426px) */
+@media (max-width: 600px) {
+    .cars {
+        padding: 35px 0 40px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            width: 95%;
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 12px;
+        }
+
+        ul {
+            margin-top: 30px;
+            gap: 8px;
+
+            li {
+                width: 100%;
+                max-width: 300px;
+                height: 45px;
+                padding-left: 15px;
+                column-gap: 8px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для маленьких мобильных (425px и меньше) */
+@media (max-width: 425px) {
+    .cars {
+        padding: 30px 0 35px 0;
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 10px;
+        }
+
+        ul {
+            margin-top: 25px;
+            gap: 6px;
+
+            li {
+                height: 42px;
+                padding-left: 12px;
+
+                p {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Адаптив для очень маленьких экранов (320px) */
+@media (max-width: 320px) {
+    .cars {
+        padding: 25px 0 30px 0;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 11px;
+            line-height: 15px;
+        }
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                height: 40px;
+                padding-left: 10px;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape режим для мобильных устройств */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .cars {
+        padding: 30px 0 40px 0;
+
+        h3 {
+            width: 80%;
+        }
+
+        ul {
+            margin-top: 30px;
+            
+            li {
+                width: 250px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .cars {
+        ul {
+            li {
+                width: 220px;
+                height: 45px;
+                
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+    .cars {
+        padding: 25px 0 30px 0;
+
+        ul {
+            gap: 6px;
+            
+            li {
+                width: 200px;
+                height: 40px;
+                padding-left: 10px;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

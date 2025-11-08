@@ -1,0 +1,14 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+
+// Blocks
+@import "./blocks/header";
+@import "./blocks/info";
+@import "./blocks/services";
+@import "./blocks/cars";
+@import "./blocks/addresses";
+@import "./blocks/footer";
