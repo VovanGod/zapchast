@@ -260,7 +260,6 @@
 @media (max-width: 1024px) and (orientation: landscape) {
     .header {
         padding: 12px 40px;
-        position: relative;
         
         &__logo {
             .title {
@@ -287,6 +286,7 @@
 @media (max-width: 768px) and (orientation: landscape) {
     .header {
         padding: 10px 25px;
+        position: relative;
         
         &__logo {
             .title {
