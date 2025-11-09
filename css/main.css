@@ -106,8 +106,27 @@ body {
   color: rgb(107, 114, 128);
   font-family: "Open Sans", sans-serif;
   max-width: 100%;
+  -webkit-animation: pageFadeIn 0.4s ease-in-out;
+          animation: pageFadeIn 0.4s ease-in-out;
 }
 
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .none {
   display: none !important;
 }
@@ -765,9 +784,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 24px;
-     -moz-column-gap: 24px;
-          column-gap: 24px;
+  gap: 24px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 35px;
@@ -1566,6 +1583,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .footer__address {
   margin-top: 15px;
