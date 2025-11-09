@@ -377,6 +377,7 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
   .header {
     padding: 12px 40px;
+    position: relative;
   }
   .header__logo .title {
     font-size: 20px;
